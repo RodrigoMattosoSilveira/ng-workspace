@@ -6,6 +6,6 @@ import { CoolComponent } from './cool/cool.component';
   declarations: [LibraryComponent, CoolComponent],
   imports: [
   ],
-  exports: [LibraryComponent]
+  exports: [LibraryComponent, CoolComponent]
 })
 export class LibraryModule { }
