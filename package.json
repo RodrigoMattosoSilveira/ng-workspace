@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build_lib": "ng build library",
+    "pack_lib": "cd dist/library && npm pack",
+    "build_pack": "npm run build_lib && npm run pack_lib"
   },
   "private": true,
   "dependencies": {
