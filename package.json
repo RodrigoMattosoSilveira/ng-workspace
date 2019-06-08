@@ -9,7 +9,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build_lib": "ng build library",
-    "pack_lib": "cd dist/library && npm pack",
+    "copy_license": "cp ./projects/library/LICENSE ./dist/library",
+    "copy_readme": "cp .//projects/library/README.md ./dist/library",
+    "copy_files": "npm run copy_license && npm run copy_readme",
+    "pack_lib": "npm run copy_files && cd dist/library && npm pack",
     "build_pack": "npm run build_lib && npm run pack_lib"
   },
   "private": true,
