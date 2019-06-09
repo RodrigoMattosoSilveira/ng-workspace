@@ -1,6 +1,6 @@
 # NgWorkspace
 
-[![Build Status](https://travis-ci.org/RodrigoMattosoSilveira/ng-workspaces.svg?branch=master)](https://travis-ci.org/RodrigoMattosoSilveira/ng-workspaces)
+[![Build Status](https://travis-ci.org/RodrigoMattosoSilveira/ng-workspace.svg?branch=master)](https://travis-ci.org/RodrigoMattosoSilveira/ng-workspace)
 
 This is a repository used to illustrate the usage of Angular Workspace, including:
 - Set an Angular Workspace, `ng-workspace`;
