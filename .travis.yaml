@@ -1,0 +1,45 @@
+language: node_js
+node_js:
+- 10.15.3
+dist: trusty
+sudo: required
+addons:
+  chrome: stable
+git:
+  quiet: true
+  submodules: false
+branches:
+  only:
+  - /.*/
+before_install:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+install:
+- npm install -g @angular/cli@7.3.9
+before_script:
+- npm install
+script:
+- ng test living-style-guide --karmaConfig=./karma.conf.travisci.js
+- ng test library --karmaConfig=./karma.conf.travisci.js
+- ng e2e
+- ng build living-style-guide
+before_cache:
+- echo "before_cache has no steps"
+cache:
+- npm
+before_deploy:
+- echo "before_deploy steps"
+- "./.travis/tag.sh"
+deploy:
+  provider: pages
+  skip_cleanup: true # set to true, otherwise Travis CI will delete all the files created during the build.
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true # Optional, create incremental commit instead of doing push force, defaults to false.
+  local_dir: ./dist/living-style-guide
+  target_branch: gh-pages # it is the default, provided for documentation sake
+  on:
+    branch: master
+after_deploy:
+- echo "after_deploy has no steps"
+after_script:
+- echo "after_script has no steps"
