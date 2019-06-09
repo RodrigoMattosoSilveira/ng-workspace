@@ -19,8 +19,9 @@ install:
 before_script:
 - npm install
 script:
-- ng test living-style-guide --karmaConfig=./karma.conf.travisci.js
+- ng build library
 - ng test library --karmaConfig=./karma.conf.travisci.js
+- ng test living-style-guide --karmaConfig=./karma.conf.travisci.js
 - ng e2e
 - ng build living-style-guide
 before_cache:
