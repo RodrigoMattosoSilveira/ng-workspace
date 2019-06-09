@@ -29,8 +29,7 @@ before_cache:
 cache:
 - npm
 before_deploy:
-- echo "before_deploy steps"
-- "./.travis/tag.sh"
+- echo "before_deploy has no steps"
 deploy:
   provider: pages
   skip_cleanup: true # set to true, otherwise Travis CI will delete all the files created during the build.
