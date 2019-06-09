@@ -1,27 +1,14 @@
 # NgWorkspace
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+[![Build Status](https://travis-ci.org/RodrigoMattosoSilveira/ng-workspaces.svg?branch=master)](https://travis-ci.org/RodrigoMattosoSilveira/ng-workspaces)
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This is a repository used to illustrate the usage of Angular Workspace, including:
+- Set an Angular Workspace, `ng-workspace`;
+- Set up an Angular Library, `library`;
+- Set up an Angular test application, `living-style-guide`, a.ka. `lsg`;
+- Use the default `library` `component` in the `lsg`;
+- Create a new `library` `component` and use it in the `lsg`;
+- Create a new Angular Application, `ng-workspace-helper`, outside the `ng-workspace` scope, and use the `library` `components` in it;
+- Publish the `library`;
+- Use the published `library` components in the helper application;
+- Deploy the `living-style-guide`;
